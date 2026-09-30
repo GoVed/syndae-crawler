@@ -1,0 +1,31 @@
+{
+  "name": "@styx-tools/crawler",
+  "version": "1.0.0",
+  "description": "Configurable Web Scraper & Crawler MCP Tool for Styx Agent OS",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "styx-crawler": "./bin/styx-crawler"
+  },
+  "scripts": {
+    "start": "node src/index.js daemon",
+    "test": "node tests/crawler.test.js"
+  },
+  "keywords": [
+    "styx",
+    "web-crawler",
+    "web-scraper",
+    "firecrawl",
+    "mcp",
+    "model-context-protocol",
+    "agent-os"
+  ],
+  "author": "Styx Community",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pino": "^9.6.0"
+  }
+}

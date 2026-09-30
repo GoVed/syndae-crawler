@@ -1,0 +1,28 @@
+services:
+  styx-crawler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: styx-crawler-connector
+    restart: unless-stopped
+    ports:
+      - "8768:8768"
+    environment:
+      - CRAWLER_URL=${CRAWLER_URL:-http://192.168.1.2:3000}
+      - HTTP_PORT=8768
+      - HTTP_HOST=0.0.0.0
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - STYX_API_URL=http://host.docker.internal:3000
+      - STYX_ACCESS_KEY=${STYX_ACCESS_KEY:-styx-local-dev-key}
+    volumes:
+      - ./instructions.md:/app/instructions.md:ro
+      - ./manifest.json:/app/manifest.json:ro
+      - ./src:/app/src:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8768/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
