@@ -1,18 +1,18 @@
 {
-  "name": "@styx-tools/crawler",
+  "name": "@syndae-tools/crawler",
   "version": "1.0.0",
-  "description": "Configurable Web Scraper & Crawler MCP Tool for Styx Agent OS",
+  "description": "Configurable Web Scraper & Crawler MCP Tool for Syndae Agent OS",
   "type": "module",
   "main": "src/index.js",
   "bin": {
-    "styx-crawler": "./bin/styx-crawler"
+    "syndae-crawler": "./bin/syndae-crawler"
   },
   "scripts": {
     "start": "node src/index.js daemon",
     "test": "node tests/crawler.test.js"
   },
   "keywords": [
-    "styx",
+    "syndae",
     "web-crawler",
     "web-scraper",
     "firecrawl",
@@ -20,7 +20,7 @@
     "model-context-protocol",
     "agent-os"
   ],
-  "author": "Styx Community",
+  "author": "Syndae Community",
   "license": "MIT",
   "dependencies": {
     "commander": "^13.1.0",

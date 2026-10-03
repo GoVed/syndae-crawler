@@ -6,8 +6,8 @@ import config from './config.js';
 const program = new Command();
 
 program
-  .name('styx-crawler')
-  .description('Styx Web Crawler & Scraper MCP Tool')
+  .name('syndae-crawler')
+  .description('Syndae Web Crawler & Scraper MCP Tool')
   .version('1.0.0');
 
 program

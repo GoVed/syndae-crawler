@@ -83,7 +83,7 @@ test('MCP Protocol JSON-RPC 2.0 Handler', async (t) => {
     const res = await handleJsonRpc(req);
     assert.strictEqual(res.id, 1);
     assert.strictEqual(res.result.protocolVersion, '2024-11-05');
-    assert.strictEqual(res.result.serverInfo.name, 'styx-crawler-server');
+    assert.strictEqual(res.result.serverInfo.name, 'syndae-crawler-server');
   });
 
   await t.test('handles tools/list returning scrape_page and crawl_site', async () => {
@@ -126,7 +126,7 @@ test('HTTP Server & REST Endpoints', async (t) => {
     assert.strictEqual(health.status, 'healthy');
 
     const status = await fetch(`${baseUrl}/status`).then(r => r.json());
-    assert.strictEqual(status.server.name, 'styx-crawler-server');
+    assert.strictEqual(status.server.name, 'syndae-crawler-server');
 
     const mcpRes = await fetch(`${baseUrl}/mcp`, {
       method: 'POST',

@@ -3,7 +3,7 @@ import { scrapePage, crawlSite } from '../crawler/engine.js';
 import logger from '../utils/logger.js';
 
 export const SERVER_INFO = {
-  name: 'styx-crawler-server',
+  name: 'syndae-crawler-server',
   version: '1.0.0'
 };
 

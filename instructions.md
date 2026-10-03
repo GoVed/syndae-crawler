@@ -1,7 +1,7 @@
 # Skillset: Web Scraper & Crawler Integration
 
 ## 1. Tool Overview & Architecture
-The Web Crawler & Scraper tool is a high-performance content extraction micro-daemon running alongside the Styx Agent OS. It bridges the Model Context Protocol (MCP 2024-11-05) to modern web scraping engines (such as self-hosted Firecrawl, Crawl4AI, or generic crawler endpoints) with zero-configuration native fallback.
+The Web Crawler & Scraper tool is a high-performance content extraction micro-daemon running alongside the Syndae Agent OS. It bridges the Model Context Protocol (MCP 2024-11-05) to modern web scraping engines (such as self-hosted Firecrawl, Crawl4AI, or generic crawler endpoints) with zero-configuration native fallback.
 
 ### Core Capabilities:
 - **`scrape_page`**: Scrapes a single webpage URL and converts the content into clean, structured Markdown, extracting page title, description, and metadata.

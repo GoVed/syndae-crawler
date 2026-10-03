@@ -11,8 +11,8 @@ export const config = {
   crawlerUrl: process.env.CRAWLER_URL || 'http://192.168.1.2:3000',
   httpPort: parseInt(process.env.HTTP_PORT || '8768', 10),
   httpHost: process.env.HTTP_HOST || '0.0.0.0',
-  styxApiUrl: process.env.STYX_API_URL || 'http://localhost:3000',
-  styxAccessKey: process.env.STYX_ACCESS_KEY || '',
+  syndaeApiUrl: process.env.SYNDAE_API_URL || 'http://localhost:3000',
+  syndaeAccessKey: process.env.SYNDAE_ACCESS_KEY || '',
   logLevel: process.env.LOG_LEVEL || 'info',
   timeoutMs: parseInt(process.env.CRAWLER_TIMEOUT_MS || '30000', 10),
   rootDir: path.resolve(__dirname, '..')

@@ -3,7 +3,7 @@
   "display_name": "Web Crawler & Scraper",
   "version": "1.0.0",
   "description": "Configurable Web Scraper & Crawler MCP Tool (supports Firecrawl, Crawl4AI, self-hosted, or native)",
-  "container_name": "styx-crawler-connector",
+  "container_name": "syndae-crawler-connector",
   "port": 8768,
   "protocol": "crawler",
   "instructions_file": "instructions.md",

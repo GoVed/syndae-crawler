@@ -83,7 +83,7 @@ export async function nativeScrape(urlString, maxLength = 8000) {
   try {
     const res = await fetch(urlString, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; StyxCrawler/1.0; +https://github.com/styx)',
+        'User-Agent': 'Mozilla/5.0 (compatible; SyndaeCrawler/1.0; +https://github.com/syndae)',
         'Accept': 'text/html,application/xhtml+xml,text/plain'
       },
       signal: controller.signal
@@ -145,7 +145,7 @@ export async function nativeCrawl({ startUrl, limit = 5, maxDepth = 2, sameDomai
       if (current.depth < maxDepth && results.length < limit) {
         // Fetch raw HTML for link extraction
         const res = await fetch(current.url, {
-          headers: { 'User-Agent': 'Mozilla/5.0 (compatible; StyxCrawler/1.0)' }
+          headers: { 'User-Agent': 'Mozilla/5.0 (compatible; SyndaeCrawler/1.0)' }
         }).catch(() => null);
 
         if (res && res.ok) {

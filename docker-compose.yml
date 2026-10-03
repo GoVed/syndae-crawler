@@ -1,9 +1,9 @@
 services:
-  styx-crawler:
+  syndae-crawler:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: styx-crawler-connector
+    container_name: syndae-crawler-connector
     restart: unless-stopped
     ports:
       - "8768:8768"
@@ -12,8 +12,8 @@ services:
       - HTTP_PORT=8768
       - HTTP_HOST=0.0.0.0
       - LOG_LEVEL=${LOG_LEVEL:-info}
-      - STYX_API_URL=http://host.docker.internal:3000
-      - STYX_ACCESS_KEY=${STYX_ACCESS_KEY:-styx-local-dev-key}
+      - SYNDAE_API_URL=http://host.docker.internal:3000
+      - SYNDAE_ACCESS_KEY=${SYNDAE_ACCESS_KEY:-syndae-local-dev-key}
     volumes:
       - ./instructions.md:/app/instructions.md:ro
       - ./manifest.json:/app/manifest.json:ro
